@@ -222,7 +222,7 @@
  * Clang thresholds are on versions 3.7.0 and 3.8.0.
  */
 #ifndef BR_CLANG
-#if __clang__
+#if __clang__ && !defined(_MSC_VER)
 #define BR_CLANG   1
 
 #if __clang_major__ > 3 || (__clang_major__ == 3 && __clang_minor__ >= 8)
